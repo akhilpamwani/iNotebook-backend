@@ -1,6 +1,6 @@
 
 const express = require('express')
-require('dotenv').config({path:'./config.env'})
+require('dotenv').config({path:'./.env'})
 const connectToMongoose = require('./db')
 const app = express()
 const port = process.env.PORT || 5000
