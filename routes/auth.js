@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const fetchuser=require('../middlewares/fetchuser');
- const Jwt_Secret="Hefdsfdfs";
+ const Jwt_Secret=process.env.JWT_SECRET;
 
 
 router.post('/createuser',[

@@ -1,7 +1,9 @@
 const mongoose=require('mongoose');
-const mongoURL='mongodb://0.0.0.0:27017/iNoteBook'; 
+require('dotenv').config({path:'../config.env'})
 const connectToMongoose=()=>{
-  mongoose.connect(mongoURL)
+  mongoose.connect(
+    
+    process.env.MONGO_URL  )
   .then(async() => {
    await console.log("Connected to Database");
 })

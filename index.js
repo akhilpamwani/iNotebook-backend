@@ -1,7 +1,9 @@
+
 const express = require('express')
+require('dotenv').config({path:'./config.env'})
 const connectToMongoose = require('./db')
 const app = express()
-const port = 8000
+const port = process.env.PORT || 5000
 
 app.use(express.json())
 connectToMongoose()
